@@ -1,0 +1,64 @@
+┌──────────────────────────────┐
+│      Administrator IT        │
+│                              │
+│  - Definiuje polityki GPO     │
+│  - Konfiguruje BitLocker      │
+│  - Zarządza kluczami          │
+└───────────────┬──────────────┘
+                │
+                │ Group Policy (GPO)
+                ▼
+┌──────────────────────────────┐
+│ Active Directory Domain      │
+│ Services (AD DS)             │
+│                              │
+│  - Przechowywanie kluczy     │
+│    odzyskiwania BitLocker    │
+│  - Centralne zarządzanie     │
+└───────────────┬──────────────┘
+                │
+                │ Polityki domenowe
+                ▼
+┌──────────────────────────────┐
+│ Komputer użytkownika         │
+│ Windows 11 + TPM 2.0         │
+│                              │
+│  ┌────────────────────────┐ │
+│  │ Trusted Platform Module│ │
+│  │ (TPM)                  │ │
+│  │ - Ochrona klucza       │ │
+│  │ - Sprawdzenie integral.│ │
+│  └───────────┬────────────┘ │
+│              │               │
+│              ▼               │
+│     BitLocker Drive          │
+│     Encryption               │
+│  - Szyfrowanie dysku         │
+│  - Automatyczna aktywacja    │
+└───────────────┬──────────────┘
+                │
+                │ Standardowe logowanie
+                ▼
+┌──────────────────────────────┐
+│ Użytkownik końcowy           │
+│                              │
+│  - Brak zmian w pracy        │
+│  - Dane zaszyfrowane w tle   │
+│                              │
+│  [Awaria / zmiana sprzętu]   │
+│           │                  │
+│           ▼                  │
+│   Ekran odzyskiwania         │
+│   BitLocker                  │
+└───────────────┬──────────────┘
+                │
+                │ Klucz odzyskiwania
+                ▼
+┌──────────────────────────────┐
+│ Active Directory (Recovery)  │
+│                              │
+│  - Administrator pobiera     │
+│    klucz                     │
+│  - Przywrócenie dostępu      │
+└──────────────────────────────┘
+#zrodlo - ChatGPT na podstawie mojego projektu na projekt semestralny
