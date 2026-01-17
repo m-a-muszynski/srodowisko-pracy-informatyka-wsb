@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[Zalety wdrożenia] -->|Ograniczenia techniczne| B(Wdrażanie przez administratora)
     B --> C{Używanie}
@@ -7,3 +8,4 @@ flowchart TD
     D --> G[W razie potrzeby użytkownik odzyskuje dostęp]
     E --> H[Nic nie psuje, bo do niczego nie ma dostępu]
     F --> I[Admin ma problem do rozwiązania]
+```
